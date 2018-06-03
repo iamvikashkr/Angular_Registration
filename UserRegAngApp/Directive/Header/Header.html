@@ -1,0 +1,57 @@
+﻿<div style="width:100%;height:40px">
+    
+    <div>
+
+        <md-sidenav class="md-sidenav-left" md-sidenav-left="left" md-component-id="left"  md-whiteframe="4" style=" margin-top:80px;">
+
+
+            <md-menu>
+                <md-menu-content>
+                    <md-menu-item ui-sref={{inside}}>
+                        <md-button ng-click="close()">
+                            <!--<strong ng-model="hm" style=" margin-left:10%; margin-top:5%;">Home</strong>-->
+                            <input type="text" ng-model="title" style="border:none; outline:none; margin-left:27px; font-weight:700" />
+
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+            <md-menu>
+                <md-menu-content>
+                    <md-menu-item ui-sref="reg">
+                        <md-button ng-click="close()">
+                            <strong style=" margin-left:10%; margin-top:5%;">Registration</strong>
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+            <md-menu>
+                <md-menu-content>
+                    <md-menu-item ui-sref={{pg}}  ng-click="Toast()">
+                        <md-button ng-click="test()">
+                            <input type="text" ng-model="page" style="border:none; outline:none; margin-left:27px; font-weight:700" />
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+
+
+            <!--<md-content layout-margin>
+                <md-button ng-click="close()" class="md-accent">
+                    Close this Sidenav
+                </md-button>
+            </md-content>-->
+
+        </md-sidenav>
+    </div>
+    <div style="background-color:Highlight">
+        <md-button ng-click="toggleLeft()" class="">
+            <md-button class="md-fab " style="background-color:Highlight">
+                <md-icon md-svg-icon="../../Image/menu.svg"></md-icon>
+            </md-button>
+        </md-button>
+        <label style="font-weight:900 ; font-size:30px; font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif">User Registartion App</label>
+
+    </div>
+
+</div>

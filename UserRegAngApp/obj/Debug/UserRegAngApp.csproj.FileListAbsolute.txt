@@ -1,0 +1,11 @@
+D:\Angular Samples\UserRegAngApp\UserRegAngApp\UserRegAngApp\bin\UserRegAngApp.dll.config
+D:\Angular Samples\UserRegAngApp\UserRegAngApp\UserRegAngApp\bin\UserRegAngApp.dll
+D:\Angular Samples\UserRegAngApp\UserRegAngApp\UserRegAngApp\bin\UserRegAngApp.pdb
+D:\Angular Samples\UserRegAngApp\UserRegAngApp\UserRegAngApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Angular Samples\UserRegAngApp\UserRegAngApp\UserRegAngApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Angular Samples\UserRegAngApp\UserRegAngApp\UserRegAngApp\obj\Debug\UserRegAngApp.csproj.CoreCompileInputs.cache
+D:\Angular Samples\UserRegAngApp\UserRegAngApp\UserRegAngApp\obj\Debug\UserRegAngApp.dll
+D:\Angular Samples\UserRegAngApp\UserRegAngApp\UserRegAngApp\obj\Debug\UserRegAngApp.pdb
+D:\Angular Samples\UserRegAngApp\UserRegAngApp\UserRegAngApp\bin\Newtonsoft.Json.dll
+D:\Angular Samples\UserRegAngApp\UserRegAngApp\UserRegAngApp\bin\Newtonsoft.Json.xml
+D:\Angular Samples\UserRegAngApp\UserRegAngApp\UserRegAngApp\obj\Debug\UserRegAngApp.csprojResolveAssemblyReference.cache

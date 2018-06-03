@@ -1,0 +1,255 @@
+﻿<header></header>
+<div ng-app="MyApp">
+    <h1 style="text-align:center; margin-top:50px">Registration Form</h1>
+    <form name="Reg_form">       
+        <md-card md-dynamic-height style="width:700px; text-align:center;  margin-top:00px; margin-left:350px;">
+            <md-content>
+                <md-tabs md-dynamic-height md-border-bottom style="background-color:Highlight; font-weight:600">
+
+
+                    <md-tab label="PERSONAL" style="">
+                        <md-content style="background-color:ghostwhite">
+                            <div style="text-align:left">
+                                <div layout-gt-sm="row" style="padding-left:30px; ">
+                                    <md-input-container style="width:195px;">
+                                        <label>First Name</label>
+                                        <input type="text" id="fname" name="fname" ng-model="fname" ng-maxlength="15" md-maxlength="15" ng-minlength="2" md-minlength="2" required />
+                                        <div ng-messages="Reg_form.fname.$error">
+                                            <div ng-message="required">This is required</div>
+                                            <div ng-message="maxlength">Only 15 characters allowed</div>
+                                            <div ng-message="minlength"> Minimum lenth is 2</div>
+                                        </div>
+                                    </md-input-container>
+                                    <md-input-container style="width:195px;">
+                                        <label>Middle Name</label>
+                                        <input type="text" id="mname" name="mname" ng-model="mname" required ng-maxlength="15" md-maxlength="15" ng-minlength="2" />
+                                        <div ng-messages="Reg_form.mname.$error">
+                                            <div ng-message="required">This is required</div>
+                                            <div ng-message="maxlength">Only 15 characters allowed</div>
+                                            <div ng-message="minlength"> Minimum lenth is 2</div>
+                                        </div>
+                                    </md-input-container>
+                                    <md-input-container style="width:195px;">
+                                        <label>Last Name</label>
+                                        <input type="text" id="lname" name="lname" required ng-model="lname" ng-maxlength="15" md-maxlength="15" ng-minlength="2" />
+                                        <div ng-messages="Reg_form.lname.$error">
+                                            <div ng-message="required">This is required</div>
+                                            <div ng-message="maxlength">Only 15 characters allowed</div>
+                                            <div ng-message="minlength"> Minimum lenth is 2</div>
+                                        </div>
+                                    </md-input-container>
+                                </div>
+
+
+                                <div layout="row">
+                                    <label style="font-weight:600; padding-left:30px; ">Gender :</label>
+                                    <md-radio-group style="display:inline-block;" ng-model="model.gender" name="gender">
+                                        <div style="padding-left:50px;">
+                                            <md-radio-button class="radio-padding" value="male">Male</md-radio-button>
+                                            <md-radio-button class="radio-padding" value="Female">Female</md-radio-button>
+                                            <md-radio-button class="radio-padding" value="other">Other</md-radio-button>
+                                        </div>
+                                    </md-radio-group>
+
+                                </div>
+                                <div layout="row">
+                                    <p style="margin:30px">Selected Value: <span id="gender" class="radioValue">{{model.gender}}</span> </p>
+                                </div>
+
+                                <div layout="row" style="padding-left:30px">
+                                    <label style="font-weight:600"> Date of Birth: </label>
+                                    <md-datepicker ng-model="model.dob" id="dob" md-placeholder="Enter date">
+                                    </md-datepicker>
+                                </div>
+
+
+                                <div layout="row" style="padding-left:30px;">
+                                    <md-input-container class="md-block " flex-gt-sm="95">
+                                        <label>Aadhar Number </label>
+                                        <input type="text" name="aadhar" id="aadhar" ng-model="aadhar" ng-maxlength="10" md-maxlength="10" ng-minlength="10"  ng-pattern="/[0-9]{10}/" required />
+                                        <div ng-messages="Reg_form.aadhar.$error">
+                                            <div ng-message="required"> This is required</div>
+                                            <div ng-message="maxlength">Maximum length is 10</div>
+                                            <div ng-message="minlength"> Minimum lenth is 10</div>
+                                            <div ng-message="pattern">Only Digits</div>
+                                        </div>
+                                    </md-input-container>
+                                </div>
+
+
+                                <div layout="row" style="padding-left:30px">
+                                    <md-input-container class="md-block" flex-gt-sm="95">
+                                        <label>Mobile Number</label>
+                                        <input type="text" name="mobile" id="mobile" ng-model="mobile" ng-maxlength="10" md-maxlength="10" ng-minlength="10"  ng-pattern="/[0-9]{10}/"required />
+                                        <div ng-messages="Reg_form.mobile.$error">
+                                            <div ng-message="required"> This is required</div>
+                                            <div ng-message="maxlength">Maximum length is 10</div>
+                                            <div ng-message="minlength"> Minimum lenth is 10</div>
+                                            <div ng-message="pattern">Only Digits</div>
+
+                                        </div>
+                                    </md-input-container>
+                                </div>
+
+                            </div>
+                        </md-content>
+                    </md-tab>
+
+
+
+
+                    <md-tab label="ADDRESS">
+                        <md-content style="background-color:ghostwhite; ">
+                            <div style="text-align:left ;padding-left:50px;">
+
+                                <div>
+                                    <md-input-container class="md-block" flex-gt-sm="90" style="">
+                                        <label>Address1</label>
+                                        <input type="text" ng-model="address1" id="address1" name="address1" required ng-maxlength="100" md-maxlength="100" />
+                                        <div ng-messages="Reg_form.address1.$error">
+                                            <div ng-message="required"> This is Required</div>                                       
+                                        </div>
+                                    </md-input-container>
+                                </div>
+
+                                <div>
+                                    <md-input-container class="md-block" flex-gt-sm="90" style="">
+                                        <label>Address2</label>
+                                        <input type="text" ng-model="address2" id="address2" name="address2" required ng-maxlength="100" md-maxlength="100" />
+                                        <div ng-messages="Reg_form.address2.$error">
+                                            <div ng-message="required"> This is Required</div>
+                                        </div>
+                                    </md-input-container>
+                                </div>
+
+                                <div layout="row" style="">
+                                    <md-input-container class="md-block" flex-gt-sm="30">
+                                        <label>City</label>
+                                        <input type="text" ng-model="model.city" id="city" name="city" ng-maxlength="10" md-maxlength="10"  ng-pattern="/^[a-zA-Z]*$/" required />
+                                        <div ng-messages="Reg_form.city.$error">
+                                            <div ng-message="required">Required</div>
+                                            <div ng-message="pattern">Only Characters</div>
+                                        </div>
+                                    </md-input-container>
+                                    <md-input-container class="md-block" flex-gt-sm="30">
+                                        <label>District</label>
+                                        <input type="text" name="dis" ng-model="model.district" id="district" ng-maxlength="10" md-maxlength="10" ng-pattern="/^[a-zA-Z]*$/" required />
+                                        <div ng-messages="Reg_form.dis.$error">
+                                            <div ng-message="required">Required</div>
+                                            <div ng-message="pattern">Only Characters</div>
+                                        </div>
+                                    </md-input-container>
+                                    <md-input-container class="md-block" flex-gt-sm="30">
+                                        <label>Pin Code</label>
+                                        <input type="text" ng-model="model.Pin " id="Pin" name="Pin" ng-maxlength="6" md-maxlength="6" ng-pattern="/^[0-9]{6}/" required />
+                                        <div ng-messages="Reg_form.Pin.$error">
+                                            <div ng-message="required">REquired</div>
+                                            <div ng-message="pattern">Only Digits</div>
+                                        </div>
+
+                                    </md-input-container>
+                                </div>
+
+                                <div layout="row" style="">
+                                    <md-input-container class="md-block" flex-gt-sm="45">
+                                        <md-select ng-model="model.state" id="state" placeholder="Select State">
+                                            <md-option value="maharashtra">
+                                                Maharashtra
+                                            </md-option>
+                                            <md-option value="karnataka">
+                                                Karnataka
+                                            </md-option>
+                                            <md-option value="goa">
+                                                Goa
+                                            </md-option>
+                                        </md-select>
+                                    </md-input-container>
+
+                                    <md-input-container class="md-block" flex-gt-sm="45">
+                                        <md-select ng-model="model.country" id="country" placeholder="Select Country">
+                                            <md-option value="india">
+                                                India
+                                            </md-option>
+                                            <md-option value="usa">
+                                                USA
+                                            </md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                </div>
+
+                            </div>
+                        </md-content>
+                    </md-tab>
+
+
+
+
+                    <md-tab label="SECURITY">
+                        <md-content style="background-color:ghostwhite">
+                            <div style="text-align:left ;padding-left:50px;">
+
+                                <div layout="row" style="">
+                                    <h4 style="margin-top:30px;">Select Role:</h4>
+                                    <md-input-container class="md-block" flex-gt-sm="45">
+                                        <md-select ng-model="model.role" id="role" placeholder="Role">
+                                            <md-option value="role">
+                                                Select Role
+                                            </md-option>
+                                            <md-option value="admin">
+                                                Admin
+                                            </md-option>
+                                            <md-option value="client">
+                                                Client
+                                            </md-option>
+                                            <md-option value="enduser">
+                                                End-User
+                                            </md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                </div>
+                                <div>
+                                    <md-input-container style="width:500px;">
+                                        <label>Email</label>
+                                        <input type="text" name="email" ng-model="email" id="email" ng-pattern="/^([a-zA-Z0-9])+([a-zA-Z0-9._%+-])+@([a-zA-Z0-9_.-])+\.(([a-zA-Z]){2,6})$/" required />
+                                        <div ng-messages="Reg_form.email.$error">
+                                            <div ng-message="required">Required</div>
+                                            <div ng-message="pattern">Invalid Email Id</div>
+
+                                        </div>
+                                    </md-input-container>
+                                </div>
+                                <div>
+                                    <md-input-container style="width:500px;">
+                                        <label>Password</label>
+                                        <input type="password" name="password" ng-model="model.password" id="password " ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/" required />
+                                        <div ng-messages="Reg_form.password.$error">
+                                            <div ng-message="required">Required Field</div>
+                                            <div ng-message="pattern">Invalid Password</div>
+                                        </div>
+                                    </md-input-container>
+                                </div>
+                                <div>
+                                    <md-input-container style="width:500px;">
+                                        <label> Confirm Password</label>
+                                        <input type="password" name="confirm" ng-model="confirm" ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/" required />
+                                        <div ng-messages="Reg_form.confirm.$error">
+                                            <div ng-message="required">Required Field</div>
+                                            <div ng-message="pattern">Invalid Password</div>
+                                        </div>
+                                    </md-input-container>
+                                </div>
+                                <div>
+                                    <div style="padding-left:200px">
+                                        <md-button class="md-raised md-primary" type="submit" id="regbtn" ng-click="reg() " ng-disabled="Reg_form.$invalid" style="font-weight:600  ;">Submit</md-button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </md-content>
+
+                    </md-tab>
+                </md-tabs>
+            </md-content>
+        </md-card>
+    </form>
+</div>

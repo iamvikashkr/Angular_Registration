@@ -1,0 +1,144 @@
+﻿<header></header>
+
+
+<html>
+<head>
+    <title></title>
+    <script src="../../Scripts/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            var data = JSON.parse(localStorage.getItem('profile'));
+            var fname = data.fname;
+            var mname = data.mname;
+            var lname = data.lname;
+            var gender = data.gender;
+            var dob = data.dob;
+            var aadhar = data.aadhar;
+            var mobile = data.mobile;
+            var address1 = data.address1;
+            var address2 = data.address2;
+            var city = data.city;
+            var district = data.district;
+            var pin = data.pin;
+            var state = data.state;
+            var country = data.country;
+            var role = data.role;
+            var email = data.email;
+
+
+
+           document.getElementById("user").innerHTML = "Hello, " + fname;
+            document.getElementById("fname").innerHTML = fname;
+            document.getElementById("mname").innerHTML = mname;
+            document.getElementById("lname").innerHTML = lname;
+            document.getElementById("gender").innerHTML = gender;
+            document.getElementById("dob").innerHTML = dob;
+            document.getElementById("aadhar").innerHTML = aadhar;
+            document.getElementById("mobile").innerHTML = mobile;
+
+            document.getElementById("address1").innerHTML = address1;
+            document.getElementById("address2").innerHTML = address2;
+            document.getElementById("city").innerHTML = city;
+            document.getElementById("district").innerHTML = district;
+            document.getElementById("pin").innerHTML = pin;
+            document.getElementById("state").innerHTML = state;
+            document.getElementById("country").innerHTML = country;
+            document.getElementById("role").innerHTML = role;
+            document.getElementById("email").innerHTML = email;
+            
+
+
+
+
+        });
+    </script>
+
+</head>
+
+
+<body>
+
+
+    <div ng-app="MyApp">
+        <form name="pro">
+            <p id="user" style="margin-top:50px; margin-left:500px; font-weight:800">User Data:</p>
+            <md-card style="margin:auto; width:500px; text-align:center; background-color:whitesmoke;  ">
+
+                <table cellpadding="5px" cellspacing="5px" border="1" style="border:solid ; width:500px">
+                    <tr >
+                        <td colspan="2"  style="background-color:Highlight; font-weight:700">
+                            User Profile
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight:700; " >First Name</td>
+                        <td id="fname"></td>
+                    </tr>
+                    <tr>
+                        <td  style="font-weight:700">MiddleName</td>
+                        <td id="mname"></td>
+                    </tr>
+                    <tr>
+                        <td  style="font-weight:700">Last Name</td>
+                        <td id="lname"></td>
+                    </tr>
+                    <tr>
+                        <td  style="font-weight:700">Gender</td>
+                        <td id="gender"></td>
+                    </tr>
+                    <tr>
+                        <td  style="font-weight:700">Date of Birth</td>
+                        <td id="dob"></td>
+                    </tr>
+                    <tr>
+                        <td  style="font-weight:700">Aadhar Number</td>
+                        <td id="aadhar"></td>
+                    </tr>
+                    <tr>
+                        <td  style="font-weight:700">Mobile Number</td>
+                        <td id="mobile"></td>
+                    </tr>
+                    <tr>
+                        <td  style="font-weight:700">Address1</td>
+                        <td id="address1"> </td>
+                    </tr>
+                    <tr>
+                        <td  style="font-weight:700">Address2</td>
+                        <td id="address2"></td>
+                    </tr>
+                    <tr>
+                        <td  style="font-weight:700">City</td>
+                        <td id="city"></td>
+                    </tr>
+                    <tr>
+                        <td  style="font-weight:700">District</td>
+                        <td id="district"></td>
+                    </tr>
+                    <tr>
+                        <td  style="font-weight:700">Pin</td>
+                        <td id="pin"></td>
+                    </tr>
+                    <tr>
+                        <td  style="font-weight:700">State</td>
+                        <td id="state"></td>
+                    </tr>
+                    <tr>
+                        <td  style="font-weight:700">Country</td>
+                        <td id="country"></td>
+                    </tr>
+                    <tr>
+                        <td  style="font-weight:700">Role</td>
+                        <td id="role"></td>
+                    </tr>
+                    <tr>
+                        <td  style="font-weight:700">Email</td>
+                        <td id="email"></td>
+                    </tr>
+
+                </table>
+            </md-card>
+        </form>
+    </div>
+</body>
+</html>

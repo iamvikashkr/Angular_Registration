@@ -1,0 +1,38 @@
+﻿<header></header>
+
+<div ng-app="MyApp">
+   
+    <form name="signin_form">
+        <md-card style="margin:auto; width:400px; text-align:center; background-color:ghostwhite; margin-top:100px;  ">
+            <div style=" margin-bottom:30px;background-color:Highlight">
+                <h1 style="color:darkblue;">Sign In</h1>
+            </div>
+
+
+            <div style="font-weight:700">
+                <md-input-container style="width:350px; text-align:left; ">
+                    <input type="text" name="email" placeholder="Email id" id="email" ng-model="email" ng-pattern="/^([a-zA-Z0-9])+([a-zA-Z0-9._%+-])+@([a-zA-Z0-9_.-])+\.(([a-zA-Z]){2,6})$/"  required />
+                    <div ng-messages="signin_form.email.$error">
+                        <div ng-message="required">Required</div>
+                        <div ng-message="pattern">Invalid Email Id</div>
+
+                    </div>
+                </md-input-container>
+            </div>
+            <div style="font-weight:700">
+                <md-input-container style="width:350px; text-align:left">
+                    <input type="password" name="password" id="password" placeholder="Password" ng-model="password" ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/" required />
+                    <!--<div ng-messages="signin_form.password.$error">
+                        <div ng-message="required">Required</div>
+                        <div ng-message="pattern">Invalid PAssword</div>
+                    </div>-->
+
+                </md-input-container>
+            </div>
+            <div style="align-self:center">
+                <md-button type="submit" id="signbtn"class="md-raised md-primary " style="font-weight:600;color:white !important  ; ">SIGN IN</md-button>
+            </div>
+
+        </md-card>
+    </form>
+</div>
